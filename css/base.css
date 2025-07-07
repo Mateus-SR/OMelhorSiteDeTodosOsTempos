@@ -112,7 +112,8 @@ a {
     transition: all 0.75s ease;
 }
 
-a:hover {
+a:hover { 
+    
     font-size: 1.2em;
     transition: all 0.2s ease;
 }
