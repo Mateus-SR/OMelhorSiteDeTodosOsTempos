@@ -107,13 +107,12 @@ footer {
 }
 
 a {
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.75s ease;
 }
 
 a:hover {
-    
-    text-decoration: none;
     font-size: 1.2em;
     transition: all 0.2s ease;
 }
