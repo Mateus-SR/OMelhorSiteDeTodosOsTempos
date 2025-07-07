@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+@import url('https://fonts.googleapis.com/css?family=Libertinus+Mono');
+
+/*  As cores (do mais escuro para o mais claro):
+#09474a - Meio azul
+#71aa35 - Verde musgo
+#3dbf8c - Quase azul
+#caff23 - Verde Look Back
+#b7e1cd - A Cor Pálida
+*/
+
+
+html {
+    box-sizing: border-box;
+    margin: auto;
+    font-family: 'Comfortaa', 'Arial', Courier, monospace;
+    width: fit-content;
+    font-size: 1vw;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    transition: all 0.5s ease;
+}
+
+.titulo {
+    font-size: 3.2em !important;
+    font-family: 'Libertinus Mono', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+}
+
+
+ul {
+    list-style: none;
+    line-height: 2em;
+}
+
+footer {
+    display: block;
+    position: sticky;
+    bottom: 0px;
+}
+
+.subtitulo {
+    font-size: 2.7em !important;
+    font-family: 'Libertinus Mono', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.sobre {
+    margin: 30px 0px;
+    cursor: pointer;
+}
+
+.highlight {
+    transition: all 1s ease;
+}
+
+.highlight:hover /*.ModoClaro*/{
+    color: #3dbf8c;
+    text-shadow:
+    2px 0px 2px #09474a,
+    -2px 0px 2px #09474a,
+    0px 2px 2px #09474a,
+    0px -2px 2px #09474a;
+    transition: all 0.3s ease;
+}
+
+/*
+.highlight:hover .ModoEscuro{
+    color: #3dbf8c;
+    text-shadow:
+    2px 0px 2px #b7e1cd,
+    -2px 0px 2px #b7e1cd,
+    0px 2px 2px #b7e1cd,
+    0px -2px 2px #b7e1cd;
+    transition: all 0.3s ease;
+}
+    */
+
+.Esconde {
+    display: none;
+    animation: FadeOut 1s;
+}
+
+.Mostra {
+    display: block;
+    animation: FadeIn 1s;
+}
+
+@keyframes FadeIn {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes FadeOut {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+a {
+    cursor: pointer;
+    transition: all 0.75s ease;
+}
+
+a:hover {
+    
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.2s ease;
+}
+
+
+.BrancoEscuro {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.ModoClaro {
+    background-color: #b7e1cd;
+    color: #09474a;
+}
+
+.ModoEscuro {
+    background-color: #09474a;
+    color: #b7e1cd;
+}

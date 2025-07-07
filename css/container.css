@@ -1,0 +1,23 @@
+.container-header {
+    display: flex    ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container-conteudo {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    text-align: left;
+
+    border: 2px solid #3dbf8c;
+    border-radius: 2px;
+
+    line-height: 20px;
+    margin: 20px 100px 20px 100px;
+}
