@@ -36,7 +36,7 @@ body {
     padding: 0px 20px 0px 20px;
 }
 
-p {
+p, a {
     font-size: clamp(1.6rem, 1.75vw, 2.2rem);
 
     text-align: left;
@@ -46,7 +46,7 @@ p {
 
 ul {
     list-style: none;
-    line-height: 2em;
+    line-height: clamp(1.6rem, 3vw, 3.5rem);
 }
 
 .borda {
@@ -70,7 +70,7 @@ ul {
     transition: all 1s ease;
 }
 
-.highlight:hover /*.ModoClaro*/{
+.highlight:hover .ModoClaro{
     color: #3dbf8c;
     text-shadow:
     2px 0px 2px #09474a,
@@ -101,14 +101,26 @@ ul {
 }
 
 a {
+    padding: 5px;
+
+    text-decoration-color: inherit;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.75s ease;
 }
 
+a:link, a:visited, a:active {
+    color: inherit;
+  }
+
+
+
 a:hover { 
-    
-    font-size: 1.2em;
+   margin: 10px;
+
+    background-color: black;
+    border-radius: 10px;
+    font-size: clamp(1.8rem, 1.9vw, 2.5rem);
     transition: all 0.2s ease;
 }
 
@@ -128,8 +140,8 @@ a:hover {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #3dbf8c;
-    border: 3px solid black;
+    background-color: #3dbf8c60;
+    border: 3px solid #0000007f;
     border-radius: 20px;
 
     padding: clamp(1.6rem, 1.75vw, 2rem);
