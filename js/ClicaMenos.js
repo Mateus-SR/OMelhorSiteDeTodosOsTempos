@@ -10,6 +10,8 @@ let cliques = localStorage.getItem('cliquesSalvos') || 0;
 // Atualiza o display (usada em ambas funções)
 function updateCounter() {
     counterDisplay.textContent = cliques;
+    // Ao atualizar:
+    localStorage.setItem('cliquesSalvos', cliques);
 }
 
 // Contagem de cliques
@@ -31,7 +33,3 @@ buyButton.addEventListener("click", function() {
     }
 });
 
-
-
-// Ao atualizar:
-localStorage.setItem('cliquesSalvos', cliques);

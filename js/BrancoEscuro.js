@@ -1,31 +1,33 @@
-// Adiciona a classe ModoClaro para que o sistema de modo escuro funcione
-document.body.classList.add('ModoClaro')
+// Aplica a classe inicial
+document.body.classList.add('ModoClaro');
 
-// Procura por um elemento com a classe BrancoEscuro e chama a função toggleModoEscuro ao ser clicado
+// Verifica o modo salvo (convertendo string para boolean)
+let modoEscuro = localStorage.getItem('Modo') === 'true'; // Corrigido aqui
+
+// Aplica o modo salvo ao carregar a página
+if (modoEscuro) {
+    document.body.classList.replace('ModoClaro', 'ModoEscuro');
+    document.querySelector('.BrancoEscuro .fas')?.classList.replace('fa-moon', 'fa-sun');
+}
+
+// Event listener
 document.querySelector(".BrancoEscuro").addEventListener("click", toggleModoEscuro);
 
-var modoEscuro = false; // Inicia com modo escuro desligado
-
 function toggleModoEscuro() {
-    // Simplesmente declarando variaveis para encurtar codigo e melhorar a leitura
-    var body = document.body;
-    let icone = document.querySelector('.BrancoEscuro .fas');
-
-    if (modoEscuro === false) {
-        modoEscuro = true;
-
-        // Troca certos termos por outros
-        // (isso deixa o codigo mais limpo e direto, do que a versão antiga)
+    const body = document.body;
+    const icone = document.querySelector('.BrancoEscuro .fas');
+    
+    modoEscuro = !modoEscuro; // Inverte o estado
+    
+    if (modoEscuro) {
         body.classList.replace('ModoClaro', 'ModoEscuro');
-        icone.classList.replace('fa-moon', 'fa-sun');
+        icone?.classList.replace('fa-moon', 'fa-sun');
     } else {
-        modoEscuro = false;
-
-        // Troca certos termos por outros
-        // (isso deixa o codigo mais limpo e direto, do que a versão antiga)
         body.classList.replace('ModoEscuro', 'ModoClaro');
-        icone.classList.replace('fa-sun', 'fa-moon');
+        icone?.classList.replace('fa-sun', 'fa-moon');
     }
+    
+    localStorage.setItem('Modo', modoEscuro); // Armazena como string
 }
 
 /*  Codigo antigo

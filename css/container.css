@@ -1,3 +1,12 @@
+.container-main {
+    display: flex !important;
+
+    min-height: 100vh;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .container-header {
     display: flex    ;
     flex-direction: row;
@@ -8,16 +17,13 @@
 
 .container-conteudo {
     display: flex;
+
+    flex: 1;
+
     align-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
 
-    text-align: left;
-
-    border: 2px solid #3dbf8c;
-    border-radius: 2px;
-
-    line-height: 20px;
     margin: 20px 100px 20px 100px;
 }
