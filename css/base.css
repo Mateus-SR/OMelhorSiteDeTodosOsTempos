@@ -36,7 +36,8 @@ body {
     padding: 0px 20px 0px 20px;
 }
 
-p, a {
+p,
+a {
     font-size: clamp(1.6rem, 1.75vw, 2.2rem);
 
     text-align: left;
@@ -70,24 +71,24 @@ ul {
     transition: all 1s ease;
 }
 
-.highlight:hover .ModoClaro{
+.highlight:hover .ModoClaro {
     color: #3dbf8c;
     text-shadow:
-    2px 0px 2px #09474a,
-    -2px 0px 2px #09474a,
-    0px 2px 2px #09474a,
-    0px -2px 2px #09474a;
+        2px 0px 2px #09474a,
+        -2px 0px 2px #09474a,
+        0px 2px 2px #09474a,
+        0px -2px 2px #09474a;
     transition: all 0.3s ease;
 }
 
 
-.highlight:hover .ModoEscuro{
+.highlight:hover .ModoEscuro {
     color: #3dbf8c;
     text-shadow:
-    2px 0px 2px #b7e1cd,
-    -2px 0px 2px #b7e1cd,
-    0px 2px 2px #b7e1cd,
-    0px -2px 2px #b7e1cd;
+        2px 0px 2px #b7e1cd,
+        -2px 0px 2px #b7e1cd,
+        0px 2px 2px #b7e1cd,
+        0px -2px 2px #b7e1cd;
     transition: all 0.3s ease;
 }
 
@@ -109,15 +110,17 @@ a {
     transition: all 0.75s ease;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
     color: inherit;
-  }
+}
 
 
 
-a:hover { 
-   margin: 10px;
-
+a:hover {
+    margin: 10px;
+    padding: 10px;
     background-color: black;
     border-radius: 10px;
     font-size: clamp(1.8rem, 1.9vw, 2.5rem);
