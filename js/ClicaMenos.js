@@ -27,7 +27,7 @@ setInterval (Func_Powerup_CliqueSegundos, Timer_Powerup_CliqueSegundos);
 function Func_Powerup_CliqueSegundos() {
     cliques += Qtnd_Powerup_CliqueSegundos;
     updateCounter();
-    localStorage.setItem('Var_Timer_Powerup_CliqueSegundos', cliques);
+    localStorage.setItem('Var_Timer_Powerup_CliqueSegundos', 10000);
 }
 
 
@@ -40,8 +40,8 @@ Powerup_CliqueSegundos.addEventListener("click", function() {
         updateCounter();
         alert("Compra realizada com sucesso!");
         Qtnd_Powerup_CliqueSegundos++;
-        localStorage.setItem('Var_Qtnd_Powerup_CliqueSegundos', cliques);
-        Powerup_CliqueSegundos.replace('-', Qtnd_Powerup_CliqueSegundos);
+        localStorage.setItem('Var_Qtnd_Powerup_CliqueSegundos', Qtnd_Powerup_CliqueSegundos);
+        Powerup_CliqueSegundos.textContent.replace('-', Qtnd_Powerup_CliqueSegundos);
     } else {
         alert(`Você precisa de mais ${preco - cliques} cliques!`);
     }
