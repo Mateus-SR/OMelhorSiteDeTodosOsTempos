@@ -6,8 +6,8 @@ const Powerup_CliqueSegundos = document.querySelector(".Powerup_CliqueSegundos")
 
 // No início:
 let cliques = localStorage.getItem('cliquesSalvos') || 0;
-let Qtnd_Powerup_CliqueSegundos = localStorage.getItem('cliquesSalvos') || 0;
-let Timer_Powerup_CliqueSegundos = localStorage.getItem('cliquesSalvos') || 10000;
+let Qtnd_Powerup_CliqueSegundos = localStorage.getItem('Var_Qtnd_Powerup_CliqueSegundos') || 0;
+let Timer_Powerup_CliqueSegundos = localStorage.getItem('Var_Timer_Powerup_CliqueSegundos') || 10000;
 
 // Atualiza o display (usada em ambas funções)
 function updateCounter() {
@@ -27,7 +27,7 @@ setInterval (Func_Powerup_CliqueSegundos, Timer_Powerup_CliqueSegundos);
 function Func_Powerup_CliqueSegundos() {
     cliques += Qtnd_Powerup_CliqueSegundos;
     updateCounter();
-
+    localStorage.setItem('Var_Timer_Powerup_CliqueSegundos', cliques);
 }
 
 
@@ -40,6 +40,8 @@ Powerup_CliqueSegundos.addEventListener("click", function() {
         updateCounter();
         alert("Compra realizada com sucesso!");
         Qtnd_Powerup_CliqueSegundos++;
+        localStorage.setItem('Var_Qtnd_Powerup_CliqueSegundos', cliques);
+        Powerup_CliqueSegundos.replace('-', Qtnd_Powerup_CliqueSegundos);
     } else {
         alert(`Você precisa de mais ${preco - cliques} cliques!`);
     }
