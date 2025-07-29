@@ -103,28 +103,29 @@ ul {
 
 a {
     padding: 5px;
-
     text-decoration-color: inherit;
+    cursor: wait;
     text-decoration: none;
-    cursor: pointer;
-    transition: all 0.75s ease;
+    transition: all 0.3s ease-out;
 }
 
 a:link,
 a:visited,
 a:active {
     color: inherit;
+    cursor: pointer;
+}
+
+li {
+    padding: 5px;
 }
 
 
-
 a:hover {
-    margin: 10px;
-    padding: 10px;
-    background-color: black;
-    border-radius: 10px;
+    padding: 1.75rem 15rem;
+    background-color: #0000007f;
     font-size: clamp(1.8rem, 1.9vw, 2.5rem);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-out;
 }
 
 
@@ -158,4 +159,8 @@ a:hover {
 .ModoEscuro {
     background-color: #09474a;
     color: #b7e1cd;
+}
+
+.titulo-menu {
+    cursor: pointer;
 }
