@@ -149,6 +149,9 @@ a:hover {
     border-radius: 20px;
 
     padding: clamp(1.6rem, 1.75vw, 2rem);
+
+    width: 20px;
+    height: 20px;
 }
 
 .ModoClaro {
