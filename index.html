@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".panel").hide();
+
+            $(".flip").click(function () {
+                $(this).next(".panel").slideToggle(500);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,15 +29,16 @@
         <i class='fas fa-moon'></i>
     </div>
 
-    <div class="container-main">
+    <div class="grid-container-main">
         <header>
-            <div class="container-header">
+            <div class="grid-container-head">
                 <h1 class="titulo">O Melhor Site De Todos Os Tempos*</h1>
 
 
             </div>
         </header>
 
+        <!-- 
         <div class="container-conteudo">
             <p class="subtitulo highlight">teste</p>
         </div>
@@ -36,22 +47,32 @@
             <p>teste</p>
         </div>
 
-        <div class="container-conteudo borda">
-            <h1 class="titulo">Le menu</h1>
-            <ul>
+    -->
+
+        <div class="grid-container-menu borda">
+            <h1 class="titulo-menu flip">Projetos sérios</h1>
+            <ul class="lista panel">
                 <li><a>Bootstrap</a></li>
                 <li><a>Tailwind</a></li>
+                <li><a>Teste Animações</a></li>
+
+            </ul>
+
+            <h1 class="titulo-menu flip">Projetos não tão sérios</h1>
+            <ul class="lista panel">
                 <li><a href="desbagaclicker.html">DesbagaClicker</a></li>
                 <li><a>Sinpsons Cry</a></li>
-                <li><a>Teste Animações</a></li>
-                <li><a>Lorem ipsum</a></li>
                 <li><a>Everson Zoio</a></li>
             </ul>
-            
+
         </div>
 
-        <div>
-            <p>teste2</p>
+        <div class="grid-container-text">
+            <p>esse é um texto placeholder aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </div>
+
+        <div class="grid-container-foot">
+            <p>*da última semana</p>
         </div>
 
     </div>
