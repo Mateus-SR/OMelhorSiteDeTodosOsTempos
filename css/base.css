@@ -30,18 +30,23 @@ body {
 }
 
 .titulo {
-    font-size: clamp(2.8rem, 3vw, 5.5rem);
+    font-size: clamp(3.5rem, 4vw, 5.5rem);
     font-family: 'Libertinus Mono', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    padding: 0px 20px 0px 20px;
 }
 
 p,
 a {
     font-size: clamp(1.6rem, 1.75vw, 2.2rem);
-
+    white-space: wrap;
+    overflow-wrap: break-word;
     text-align: left;
     line-height: 20px;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 
@@ -130,10 +135,10 @@ a:hover {
 
 
 .BrancoEscuro {
-    top: 3vh;
+    bottom: 3vw;
     right: 3vw;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
 
     cursor: pointer;
 
@@ -146,12 +151,12 @@ a:hover {
 
     background-color: #3dbf8c60;
     border: 3px solid #0000007f;
-    border-radius: 20px;
+    border-radius: 5px;
 
     padding: clamp(1.6rem, 1.75vw, 2rem);
 
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
 }
 
 .ModoClaro {
@@ -165,5 +170,17 @@ a:hover {
 }
 
 .titulo-menu {
+    font-size: clamp(2.3rem, 2.9vw, 3.5rem);
+    font-family: 'Libertinus Mono', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
     cursor: pointer;
+
+    transition: all 0.7s ease;
+
+}
+
+.titulo-menu:hover {
+    scale: 120%;
+    transition: all 0.2s ease;
 }
