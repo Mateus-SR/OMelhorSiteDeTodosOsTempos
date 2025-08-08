@@ -10,6 +10,15 @@
 #b7e1cd - A Cor Pálida
 */
 
+:root {
+--CorPálida: #b7e1cd;
+--LookBack: #caff23;
+--QuaseAzul: #3dbf8c;
+--VerdeMusgo: #71aa35;
+--MeioAzul: #09474a;
+}
+
+
 
 html {
     box-sizing: border-box;
@@ -56,7 +65,7 @@ ul {
 }
 
 .borda {
-    border: 2px solid #3dbf8c;
+    border: 2px solid var(--QuaseAzul);
     border-radius: 2px;
 }
 
@@ -65,6 +74,10 @@ ul {
     font-family: 'Libertinus Mono', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     padding: 0px 20px 0px 20px;
+}
+
+.rodape {
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
 }
 
 .sobre {
@@ -77,23 +90,23 @@ ul {
 }
 
 .highlight:hover .ModoClaro {
-    color: #3dbf8c;
+    color: var(--QuaseAzul);
     text-shadow:
-        2px 0px 2px #09474a,
-        -2px 0px 2px #09474a,
-        0px 2px 2px #09474a,
-        0px -2px 2px #09474a;
+        2px 0px 2px var(--MeioAzul),
+        -2px 0px 2px var(--MeioAzul),
+        0px 2px 2px var(--MeioAzul),
+        0px -2px 2px var(--MeioAzul);
     transition: all 0.3s ease;
 }
 
 
 .highlight:hover .ModoEscuro {
-    color: #3dbf8c;
+    color: var(--QuaseAzul);
     text-shadow:
-        2px 0px 2px #b7e1cd,
-        -2px 0px 2px #b7e1cd,
-        0px 2px 2px #b7e1cd,
-        0px -2px 2px #b7e1cd;
+        2px 0px 2px var(--CorPálida),
+        -2px 0px 2px var(--CorPálida),
+        0px 2px 2px var(--CorPálida),
+        0px -2px 2px var(--CorPálida);
     transition: all 0.3s ease;
 }
 
@@ -149,7 +162,7 @@ a:hover {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #3dbf8c60;
+    background-color: var(--QuaseAzul)60;
     border: 3px solid #0000007f;
     border-radius: 5px;
 
@@ -160,13 +173,13 @@ a:hover {
 }
 
 .ModoClaro {
-    background-color: #b7e1cd;
-    color: #09474a;
+    background-color: var(--test);
+    color: var(--MeioAzul);
 }
 
 .ModoEscuro {
-    background-color: #09474a;
-    color: #b7e1cd;
+    background-color: var(--MeioAzul);
+    color: var(--CorPálida);
 }
 
 .titulo-menu {
@@ -184,3 +197,4 @@ a:hover {
     scale: 120%;
     transition: all 0.2s ease;
 }
+
